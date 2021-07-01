@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+package product;
+
+service ProductService {
+    rpc Create(ProductRequest) returns (ProductResponse) {}
+    rpc Update(ProductRequest) returns (ProductResponse) {}
+    rpc FindOne(ProductIdRequest) returns (ProductResponse) {}
+    rpc FindAll(google.protobuf.Empty) returns (ProductsResponse) {}
+    rpc Delete(ProductIdRequest) returns (google.protobuf.Empty) {}
+}
+
+message ProductIdRequest{
+    int32 id = 1;
+}
+
+message ProductRequest {
+    int32 id = 1;
+    string name = 2;
+    double price = 3;
+}
+
+message ProductResponse{
+    int32 id = 1;
+    string name = 2;
+    double price = 3;
+}
+
+message ProductsResponse{
+    repeated ProductResponse data = 1;
+}

@@ -27,3 +27,12 @@ DELETE http://localhost:3000/products/1
 # PUT (Completa) vs PATCH (Parcial)
 # 200 OK
 # 201 Created
+
+###
+POST http://localhost:3000/product-grpc-clients
+Content-type: application/json
+
+{
+    "name": "produto teste",
+    "price": 10.02
+}

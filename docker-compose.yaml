@@ -22,3 +22,8 @@ services:
       - POSTGRES_DB=store
     volumes:
       - .docker/dbdata:/var/lib/postgresql/data
+
+  grpc-test:
+    image: gusaul/grpcox:latest
+    ports: 
+      - 6969:6969

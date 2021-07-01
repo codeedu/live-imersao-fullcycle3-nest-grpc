@@ -15,3 +15,5 @@ export class EntityNotFoundExceptionFilter implements ExceptionFilter {
     });
   }
 }
+
+//IF code === status.NOT_FOUND ===> response 404
